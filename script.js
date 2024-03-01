@@ -11,14 +11,14 @@ checkButton.addEventListener('click' , function() {
   
 
   if(!guessInput) {
-    message.textContent = "Unknown number!";
+    message.textContent = "⛔️ Unknown number!";
   } else if (guessInput > secretNumber) {
       if (score > 1) {
         score--;
         mainScore.textContent = score;
-        message.textContent = "Too high!";
+        message.textContent = "📈 Too high!";
       } else {
-        message.textContent = "Game over!"
+        message.textContent = "💥 Game over!"
         mainScore.textContent = 0;
       }
 
@@ -27,9 +27,9 @@ checkButton.addEventListener('click' , function() {
     if (score > 1) {
       score--;
       mainScore.textContent = score;
-      message.textContent = "Too low!"; 
+      message.textContent = "📉 Too low!"; 
     } else {
-      message.textContent = "Game over!";
+      message.textContent = "💥 Game over!";
       mainScore.textContent = 0;
     }
   }

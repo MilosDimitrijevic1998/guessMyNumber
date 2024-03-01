@@ -1,6 +1,7 @@
 'use strict';
 let secretNumber = Math.floor(Math.random() * 20) + 1;
 let score = 20
+let highScore = 0;
 
 // ---> 1. eventListener on CHECK button click
 const checkButton = document.querySelector('.check');
@@ -19,6 +20,11 @@ checkButton.addEventListener('click' , function() {
         document.querySelector('.number').textContent = secretNumber;
         document.querySelector('body').style.backgroundColor = '#60b347';
         document.querySelector('.number').style.width = '30rem';
+
+    if(score > highScore) {
+        highScore = score;
+        document.querySelector('.highscore').textContent = highScore;
+    }
   // When guess if too high
   } else if (guessInput > secretNumber) {
       if (score > 1) {

@@ -13,9 +13,14 @@ checkButton.addEventListener('click' , function() {
   
   //When there is no input
   if(!guessInput) {
+    console.log('activate');
     message.textContent = "⛔️ Unknown number!";
+  }
+  else if (Boolean(guessInput) === false){
+      message.textContent = 'Please enter valid number';
+    }
   // When player wins
-  } else if (guessInput === secretNumber) {
+   else if (guessInput === secretNumber) {
         message.textContent = "🎉 Correct number!";
         document.querySelector('.number').textContent = secretNumber;
         document.querySelector('body').style.backgroundColor = '#60b347';

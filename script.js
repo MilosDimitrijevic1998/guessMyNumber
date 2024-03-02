@@ -24,7 +24,7 @@ checkButton.addEventListener('click' , function() {
         message.textContent = "🎉 Correct number!";
         document.querySelector('.number').textContent = secretNumber;
         document.querySelector('body').style.backgroundColor = '#60b347';
-        document.querySelector('.number').style.width = '30rem';
+        document.querySelector('.number').style.width = '40rem';
 
     if(score > highScore) {
         highScore = score;
